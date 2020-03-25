@@ -15,5 +15,8 @@
 ## Etap 2 - pobranie składowych wszystich opinii z pojedyńczej strony
 -zapisanie składowych opinii w złożonej strukturze danych
 ## Etap 3 - pobieranie wszystkich opinii o pojedynczym produkcie 
--przechodzenie po stronach z opiniami 
+- przechodzenie po stronach z opiniami 
 - eksport opinii do pliku (.csv lub .xlsx lub .json)
+## Etap 4
+- transformacja danych
+- refaktoryzacja kodu

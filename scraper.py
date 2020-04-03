@@ -70,3 +70,4 @@ with open("./opinions_json/"+product_id+'.json', 'w', encoding="utf-8") as fp:
 print(len(opinions_list))
 
 
+

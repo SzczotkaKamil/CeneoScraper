@@ -28,7 +28,7 @@ tags = {
 
 #adres URL przykładowej strony z opiniami
 url_prefix = "https://www.ceneo.pl"
-product_id = input("Podaj kod produktu: ")
+product_id = ""
 url_postfix = "#tab=reviews"
 url = url_prefix+"/"+product_id+url_postfix
 

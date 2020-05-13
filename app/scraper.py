@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import pprint
 import json
 
-#funkcja do ekstrkcji składowych opinii
+#funkcja do ekstrakcji składowych opinii
 def extract_feature(opinion, tag, tag_class, child=None):
     try:
         if child:
@@ -14,24 +14,7 @@ def extract_feature(opinion, tag, tag_class, child=None):
     except AttributeError:
         return None
 
-tags = {
-    "recommendation":["div","product-review-summary", "em"],
-    "stars":["span", "review-score-count"],
-    "content":["p","product-review-body"],
-    "author":["div", "reviewer-name-line"],
-    "pros":["div", "pros-cell", "ul"],
-    "cons":["div", "cons-cell", "ul"], 
-    "useful":["button","vote-yes", "span"],
-    "useless":["button","vote-no", "span"],
-    "purchased":["div", "product-review-pz", "em"]
-}
 
-#funkcja do usuwania znaków formatujacych
-def remove_whitespaces(string):
-    try:
-        return string.replace("\n", ", ").replace("\r", ", ")
-    except AttributeError:
-        pass
 
 #adres URL przykładowej strony z opiniami
 url_prefix = "https://www.ceneo.pl"
@@ -81,7 +64,3 @@ with open("./opinions_json/"+product_id+'.json', 'w', encoding="utf-8") as fp:
 
 print(len(opinions_list))
 # pprint.pprint(opinions_list)
-
-
-
-
